@@ -13,7 +13,13 @@ export default defineConfig({
         '**/*.test.{ts,tsx}',
         '**/*.d.ts',
         'src/app/layout.tsx',
-      ]
+      ],
+      thresholds: {
+        statements: 90,
+        branches: 90,
+        functions: 90,
+        lines: 90,
+      },
     },
   },
 });
