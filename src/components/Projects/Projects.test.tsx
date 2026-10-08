@@ -115,6 +115,12 @@ describe('Projects', () => {
     ).toHaveAttribute('href', expect.stringMatching(/^https:\/\/github\.com\//));
   });
 
-  // add test for link to deployment
+  it('provides a link to the Scrynth Netlify deployment', () => {
+    renderProjects();
+
+    expect(
+      get('Scrynth').getByRole('link', { name: /netlify/i }),
+    ).toHaveAttribute('href', expect.stringMatching(/^https:\/\/scrynth\.netlify\.app/));
+  });
   
 });

@@ -46,6 +46,9 @@ export default function Projects() {
         <a href="https://github.com/CodeKrakken/typescrynth">
           GitHub repository
         </a>
+        <a href="https://scrynth.netlify.app">
+          Netlify deployment
+        </a>
       </article>
     </section>
   );
