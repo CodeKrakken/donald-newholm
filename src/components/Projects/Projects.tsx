@@ -30,6 +30,9 @@ export default function Projects() {
         <a href="https://github.com/CodeKrakken/octopus">
           GitHub repository
         </a>
+        <a href="https://octopus-music.netlify.app">
+          Netlify deployment
+        </a>
       </article>
 
       <article aria-labelledby="scrynth-heading">

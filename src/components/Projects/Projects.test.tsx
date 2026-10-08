@@ -55,8 +55,6 @@ describe('Projects', () => {
     ).toHaveAttribute('href', expect.stringMatching(/^https:\/\/magic-money-tree\.herokuapp\.com/));
   });
 
-  // add test for link to deployment
-
   it('contains the Octopus project', () => {
     renderProjects();
 
@@ -83,7 +81,13 @@ describe('Projects', () => {
     ).toHaveAttribute('href', expect.stringMatching(/^https:\/\/github\.com\//));
   });
 
-  // add test for link to deployment
+  it('provides a link to the Octopus Netlify deployment', () => {
+    renderProjects();
+
+    expect(
+      get('Octopus').getByRole('link', { name: /netlify/i }),
+    ).toHaveAttribute('href', expect.stringMatching(/^https:\/\/octopus-music\.netlify\.app/));
+  });
 
   it('contains the Scrynth project', () => {
     renderProjects();
