@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section aria-labelledby="hero-title">
+    <section aria-label="Hero">
       <p>Software Developer creating reliable, user-focused digital products.</p>
       <nav aria-label="Hero navigation">
         <a href="#work">Work</a>
