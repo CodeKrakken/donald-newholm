@@ -39,4 +39,31 @@ describe('Experience', () => {
 
     expect(getKendraioEntry().getByText('Software Developer')).toBeInTheDocument();
   });
+
+  it('contains exactly two experience articles', () => {
+    renderExperience();
+
+    expect(screen.getAllByRole('article')).toHaveLength(2);
+  });
+
+  it('lists Code and Wander before Kendraio', () => {
+    renderExperience();
+
+    const articles = screen.getAllByRole('article');
+    const organisations = articles.map((article) =>
+      within(article).getByRole('heading', { level: 3 }).textContent,
+    );
+
+    expect(organisations).toEqual(['Code and Wander', 'Kendraio']);
+  });
+
+  it('does not display employment dates for either entry', () => {
+    renderExperience();
+
+    const articles = screen.getAllByRole('article');
+
+    articles.forEach((article) => {
+      expect(within(article).queryByText(/\b(?:19|20)\d{2}\b/)).not.toBeInTheDocument();
+    });
+  });
 });
