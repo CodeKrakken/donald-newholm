@@ -39,6 +39,17 @@ describe('Projects', () => {
     expect(get('Magic Money Tree').getByText(/technologies/i)).toBeInTheDocument();
   });
 
+  it('shows technical highlights for Magic Money Tree', () => {
+    renderProjects();
+
+    const article = get('Magic Money Tree');
+    expect(article.getByRole('heading', { name: 'Technical highlights' })).toBeInTheDocument();
+    expect(
+      within(article.getByRole('list', { name: 'Technical highlights' }))
+        .getAllByRole('listitem').length,
+    ).toBeGreaterThan(0);
+  });
+
   it('provides a link to the Magic Money Tree GitHub repository', () => {
     renderProjects();
 
@@ -73,6 +84,17 @@ describe('Projects', () => {
     expect(get('Octopus').getByText(/technologies/i)).toBeInTheDocument();
   });
 
+  it('shows technical highlights for Octopus', () => {
+    renderProjects();
+
+    const article = get('Octopus');
+    expect(article.getByRole('heading', { name: 'Technical highlights' })).toBeInTheDocument();
+    expect(
+      within(article.getByRole('list', { name: 'Technical highlights' }))
+        .getAllByRole('listitem').length,
+    ).toBeGreaterThan(0);
+  });
+
   it('provides a link to the Octopus GitHub repository', () => {
     renderProjects();
 
@@ -105,6 +127,17 @@ describe('Projects', () => {
     renderProjects();
 
     expect(get('Scrynth').getByText(/technologies/i)).toBeInTheDocument();
+  });
+
+  it('shows technical highlights for Scrynth', () => {
+    renderProjects();
+
+    const article = get('Scrynth');
+    expect(article.getByRole('heading', { name: 'Technical highlights' })).toBeInTheDocument();
+    expect(
+      within(article.getByRole('list', { name: 'Technical highlights' }))
+        .getAllByRole('listitem').length,
+    ).toBeGreaterThan(0);
   });
 
   it('provides a link to the Scrynth GitHub repository', () => {

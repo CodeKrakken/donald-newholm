@@ -11,6 +11,10 @@ export default function Projects() {
           <li>React</li>
           <li>TypeScript</li>
         </ul>
+        <h4 id="magic-money-tree-highlights-heading">Technical highlights</h4>
+        <ul aria-labelledby="magic-money-tree-highlights-heading">
+          <li>Placeholder highlight</li>
+        </ul>
         <a href="https://github.com/CodeKrakken/magic-money-tree">
           GitHub repository
         </a>
@@ -27,6 +31,10 @@ export default function Projects() {
           <li>React</li>
           <li>TypeScript</li>
         </ul>
+        <h4 id="octopus-highlights-heading">Technical highlights</h4>
+        <ul aria-labelledby="octopus-highlights-heading">
+          <li>Placeholder highlight</li>
+        </ul>
         <a href="https://github.com/CodeKrakken/octopus">
           GitHub repository
         </a>
@@ -42,6 +50,10 @@ export default function Projects() {
         <ul>
           <li>React</li>
           <li>TypeScript</li>
+        </ul>
+        <h4 id="scrynth-highlights-heading">Technical highlights</h4>
+        <ul aria-labelledby="scrynth-highlights-heading">
+          <li>Placeholder highlight</li>
         </ul>
         <a href="https://github.com/CodeKrakken/typescrynth">
           GitHub repository

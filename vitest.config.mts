@@ -12,7 +12,7 @@ export default defineConfig({
       exclude: [
         '**/*.test.{ts,tsx}',
         '**/*.d.ts',
-        'src/app/layout.tsx',
+        'frontend/app/layout.tsx',
       ],
       thresholds: {
         statements: 90,
